@@ -1,0 +1,825 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body div.contenedorg {
+
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "item1 item2"
+               "item3 item3";
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(57, 91, 100);
+
+}
+body div.contenedorg2 {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "item4 item5"
+               "item6 item6";
+    background-color:rgb(57, 91, 100);
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 5%;
+}
+
+main {
+
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+}
+
+nav ol li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1px;
+    padding: 5px;
+}
+
+ul {
+    display: flex;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+.toplogo {
+    border: solid 1px red;
+    display: flex;
+}
+
+/************************************** searchbar **************************************/
+form.searchbar input[type=text] {
+    display: inline-block;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 90%;
+    background: #f1f1f1;
+}
+
+form.searchbar button {
+    width: 150px;
+    padding: 10px;
+    background: rgb(44, 51, 51);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+
+}
+
+/******************************************************************************** index **************************************************************************************/
+
+
+/*header*/
+
+/*----------------------------------- imgs -----------------------------------*/
+
+.pokx {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.ptcg {
+
+    width: 25%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px red;
+}
+
+.support1 {
+    width: 128px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px red;
+}
+
+.support2 {
+    width: 128px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px red;
+}
+
+.support3 {
+    width: 128px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px red;
+}
+
+.deckimg {
+    width: 90%;
+
+}
+
+
+/*----------------------------------- logo -----------------------------------*/
+
+.deckndice {
+    height: 50px;
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: rgba(209, 63, 63, 0);
+    object-fit: cover;
+    border: 0px solid red
+}
+
+/* links*/
+.links {
+    border: solid 0px red;
+    padding: 10px;
+    margin: 1rem;
+    padding-bottom: 15px;
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+/*----------------------------------- topnav -----------------------------------*/
+
+.headernav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.topnav {
+    width: 100%;
+    background-color: rgb(44, 51, 51);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+    border: solid 1px red;
+}
+
+.topnav a {
+    color: rgb(165, 201, 202);
+    text-decoration: none;
+    padding: 1rem;
+    height: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+
+}
+
+.botones {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border: 0px solid red;
+    margin-top: 10px;
+
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(44, 51, 51);
+    overflow: hidden;
+}
+
+.topnav a.active {
+    background-color: rgb(57, 91, 100);
+    color: white;
+}
+
+/*----------------------------------- Main -----------------------------------*/
+.articulos {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: rgb(44, 51, 51);
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 0 0.5rem;
+    width: 100%;
+
+}
+
+.fechaupload {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    align-items: right;
+    display: none;
+    padding-bottom: 5%;
+
+}
+
+.titulonews {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 0px red;
+
+}
+
+.preview {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 0px red;
+    padding: 5%;
+    display: none;
+}
+
+.titulos {
+
+    color: rgb(165, 201, 202);
+    display: flex;
+    border: solid 0px red;
+    justify-content: center;
+    font-size: 1rem;
+    text-decoration: underline;
+
+}
+
+body main div.mainNews {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "news1 news2"
+        "news3 news4"
+        "news5 news6";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px red;
+
+
+}
+
+.news {
+
+    border: solid 2px rgb(44, 51, 51);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    padding-bottom: 1rem;
+    width: 200px;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+
+}
+
+.contenido {
+
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 10%;
+}
+
+nav {
+    padding-bottom: 2%;
+}
+
+strong {
+    font-size: 25px;
+    color: rgb(165, 201, 202)
+}
+
+/*----------------------------------- props de los fields a llenar -----------------------------------*/
+
+input {
+    width: 225px;
+    height: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: khaki;
+
+}
+
+button {
+    background: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    size: 8px;
+    padding: 3%;
+    color: rgb(0, 0, 0);
+
+}
+
+/****************************************************************************************** Store ***********************************************************************/
+
+
+.contenedor {
+    display: grid;
+    border-radius: 10px;
+    padding: 0.5em;
+    
+}
+
+
+.cardsale {
+    max-width: 200px;
+    max-height: 280px;
+    border: solid 1px red;
+    padding: 5px;
+}
+
+.adhere {
+
+    width: 70%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px red;
+    margin-bottom: 2rem;
+
+}
+
+
+/**************************************************************************************** Decklists ******************************************************************************/
+table.decklist td p {
+    font-size: inherit;
+    text-align: center;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+td {
+    display: inline-block;
+    justify-content: center;
+    border: solid 0px red;
+    vertical-align: text-top;
+    padding: 5px;
+
+}
+
+
+td .deckimg {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+.decklist-head {
+    display: block;
+    border: solid 1px red;
+
+}
+
+.decklist {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    border: solid 4px red;
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    vertical-align: text-top;
+    padding-bottom: 2%;
+
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: rgb(57, 91, 100);
+}
+
+.center {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px red;
+}
+
+.strategy {
+    width: 80%;
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border: solid 1px red;
+    padding: 30px;
+    margin: 10px;
+}
+
+.deckname {
+
+    width: 190px;
+    height: 45px;
+    font-size: 30px;
+    border: solid 1px red;
+}
+
+.pokeicons {
+    border: solid 1px red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 45px;
+
+}
+
+.maininfo {
+    display: flex;
+    justify-content: center;
+    border: solid 1px red;
+}
+
+.maininfo div.decklist {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: rgb(44, 51, 51);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 0 0.5rem;
+    width: 70%;
+    border: solid 1px red;
+}
+
+div .details {
+
+    border: solid 1px red;
+
+}
+
+/****************************************************************************************** Contact us ***********************************************************************/
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+
+}
+
+.row .contact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+
+}
+
+.row .adress {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+
+.support {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    display: flex;
+    border: solid 0px red;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    padding-top: 5%;
+    display: none
+}
+
+.systore {
+
+
+    border: solid 0px red;
+    padding: 10px;
+    margin: 1rem;
+    padding-bottom: 15px;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+}
+
+.systore p {
+    padding-top: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px
+}
+
+.vidgameplay {
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    display: flex;
+    overflow: hidden;
+    padding: 5%;
+
+}
+
+
+/**************************************************************************** Footer ****************************************************************/
+
+.footerContainer {
+    display: auto;
+    padding-top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+
+}
+
+.footerDerechos {
+    margin-top: 5px;
+    font-weight: bold;
+
+}
+
+p.copyright {
+    padding-left: 1%;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 0, 8em;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+a.contact {
+    display: flex-end;
+    margin-left: 75%;
+    padding: 5px 10px 5px;
+    background-color: rgb(44, 51, 51);
+    color: white;
+}
+
+.divider {
+    background-color: rgb(44, 51, 51);
+    margin-left: 20%;
+    width: 60%;
+    height: 1px;
+}
+
+
+/*########################################################################## mediaqueries 480px ############################################################################*/
+
+/* index */
+@media screen and (min-width:480px) {
+
+
+    body header .topnav {
+        background-color: rgb(44, 51, 51);
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+
+
+    .ptcg {
+        padding: 1rem;
+        width: 35%;
+        align-items: center;
+        display: block;
+    }
+
+
+    .preview {
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5%;
+        display: show;
+    }
+
+    /* STORE */
+
+    .adhere {
+
+        width: 50%;
+        height: 25%;
+        align-items: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+
+    }
+}
+
+
+
+/*########################################################################### mediaqueries 800px #############################################################################*/
+
+@media screen and (min-width:799px) {
+
+    /* index */
+
+    body header .topnav {
+        background-color: rgb(44, 51, 51);
+        margin-bottom: 2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.05rem;
+        padding-bottom: 5px;
+    }
+
+    .ptcg {
+        padding: 1rem;
+        width: 35%;
+        align-items: center;
+        display: block;
+    }
+
+    .preview {
+        font-size: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5%;
+        display: flex;
+
+    }
+
+    .fechaupload {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        align-items: right;
+        display: flex;
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    .titulonews {
+        font-size: 1.4rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+    }
+
+    .preview {
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5%;
+        display: inline-block;
+
+    }
+
+    .titulos {
+
+        color: rgb(57, 91, 100);
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-decoration: underline;
+
+    }
+
+
+    body main div.mainNews {
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr;
+        grid-area: "news1 news2"
+                   "news3 news4"
+                   "news5 news6";
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+ 
+
+
+    }
+
+    .news {
+
+        border: solid 2px rgb(44, 51, 51);
+        padding: 0.5rem;
+        margin: 0.5rem;
+        padding-bottom: 1rem;
+        width: 375px;
+        height: 450px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+
+    }
+
+
+    .contenido {
+
+        overflow: auto;
+        display: flex;
+        justify-content: space-around;
+        margin: 10%;
+    }
+
+    /* STORE */
+}
+
+/*########################################################################### mediaqueries 1000px #############################################################################*/
+
+@media screen and (min-width:999px) {
+
+    /* index */
+    body main div.mainNews {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-area: "news1 news2 news3"
+                   "news4 news5 news6";
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+    .ptcg {
+
+        width: 15%;
+        align-items: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 0px red;
+    }
+    /* STORE */
+
+    body div.contenedorg {
+
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-area: "item1 item2 item3";
+        justify-items: center;
+        justify-content: space-around;
+        align-items: center;
+        background-color:rgb(57, 91, 100);
+    
+    }
+    body div.contenedorg2 {
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-area: "item4 item5 item6";
+        background-color:rgb(57, 91, 100);
+        justify-items: center;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.adhere {
+
+    width: 30%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+
+}
+
+}
