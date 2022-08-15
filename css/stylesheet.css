@@ -11528,7 +11528,7 @@ body div.contenedorg {
   justify-items: center;
   justify-content: space-around;
   align-items: center;
-  background-color:rgb(57, 91, 100);
+  background-color: rgba(0, 0, 0, 0.03);
 
 }
 body div.contenedorg2 {
@@ -11539,7 +11539,7 @@ body div.contenedorg2 {
   grid-template-rows: 1fr 1fr;
   grid-area: "item4 item5"
              "item6 item6";
-  background-color:rgb(57, 91, 100);
+  background-color:rgba(0, 0, 0, 0.03);
   justify-items: center;
   justify-content: space-around;
   align-items: center;
@@ -11577,7 +11577,7 @@ h1 {
 }
 
 .toplogo {
-  border: solid 1px red;
+  border: solid 0px red;
   display: flex;
 }
 
@@ -11701,7 +11701,7 @@ form.searchbar button {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 0.65rem;
   padding-bottom: 5px;
-  border: solid 1px red;
+  border: solid 0px red;
 }
 
 .topnav a {
@@ -11795,7 +11795,7 @@ body main div.mainNews {
   justify-items: center;
   justify-content: center;
   align-items: center;
-  border: solid 1px red;
+  border: solid 0px red;
 
 
 }
@@ -11867,7 +11867,7 @@ button {
 .cardsale {
   max-width: 200px;
   max-height: 280px;
-  border: solid 1px red;
+  border: solid 0px red;
   padding: 5px;
 }
 
@@ -12201,10 +12201,7 @@ a.contact {
       grid-template-columns: repeat(3, auto);
       grid-template-rows: repeat(3, auto);
       grid-area: "item1 item2 item3";
-      justify-items: center;
-      justify-content: space-around;
-      align-items: center;
-      background-color:rgb(57, 91, 100);
+
   
   }
   body div.contenedorg2 {
@@ -12214,10 +12211,7 @@ a.contact {
       grid-template-columns: repeat(3, auto);
       grid-template-rows: repeat(3, auto);
       grid-area: "item4 item5 item6";
-      background-color:rgb(57, 91, 100);
-      justify-items: center;
-      justify-content: space-around;
-      align-items: center;
+
 }
 
 .adhere {
