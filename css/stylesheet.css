@@ -525,10 +525,19 @@ a.contact {
   height: 1px;
 }
 
+/*########################################################################## mediaqueries extra small 300px ############################################################################*/
+@media screen and (max-width: 479px){
+  .icono-wrap {
+    flex-wrap: wrap;
+    justify-content: center !important;
+}
+
+}
+
 
 /*########################################################################## mediaqueries 480px ############################################################################*/
 
-/* index */
+
 @media screen and (min-width:480px) {
 
 
@@ -570,9 +579,8 @@ a.contact {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 5rem;
-
   }
-}
+
 
 
 
@@ -730,7 +738,7 @@ a.contact {
 
 .adhere {
 
-  width: 30%;
+  width: 15%;
   align-items: center;
   display: block;
   margin-left: auto;
@@ -739,6 +747,5 @@ a.contact {
 
 }
 }
-
 }
-
+}
