@@ -1,5 +1,12 @@
 @import "utilities/variables";
+@import "utilities/mapas";
 
+/**************************************************************mediaquery 300px *************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /******************************************************************************** index **************************************************************************************/
 
@@ -41,7 +48,7 @@ form.searchbar button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: solid 0px red;
+
 }
 
 .deckimg {
@@ -55,8 +62,8 @@ p{
 /*----------------------------------- logo -----------------------------------*/
 
 .deckndice {
-    height: 50px;
-    width: 20%;
+    height: 115px;
+    width: 110px;
     margin-top: 10px;
     margin-left: 10px;
     color: $bg-principal;
@@ -66,7 +73,7 @@ p{
 
 /* links*/
 .links {
-    border: solid 0px red;
+    
     padding: 10px;
     margin: 1rem;
     padding-bottom: 15px;
@@ -83,17 +90,13 @@ p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
     padding-bottom: 5px;
-    border: solid 0px red;
     background-color: $bg-principal;
     ul li {
         list-style: none;
         display: inline-block;
+      }
     }
-    .navbar {
-        background-color: $bg-principal;
-    
-    }
-    
+
     .navbar a {
         color: rgb(165, 201, 202);
     
@@ -107,7 +110,7 @@ p{
         background-color: $bg-secundario;
         color: white;
     }
-}
+
 
 .articulos {
 
@@ -136,7 +139,7 @@ p{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-     .news-item {
+    .news-item {
       width: 80%;
       display: flex;
       flex-direction: column;
@@ -156,13 +159,13 @@ p{
       .news-upload {
       text-align: center;
       
-     }
+    }
     }
       p {
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 1rem;
-     }
+    }
       .news-image img{
         width: 50%;
         margin-left: auto;
@@ -183,90 +186,93 @@ p{
 
 
 
-/**************************************************************************** Footer ****************************************************************/
-
-.footerContainer {
-    display: auto;
-    padding-top: 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: $bg-principal;
-    .footerDerechos {
-        margin-top: 5px;
-        font-weight: bold;
-      }
-      p {
-        margin-bottom: 0px;
-        display: flex;
-        justify-content: center;
-      }
-      .copyright {
-        padding-left: 1%;
-        padding-bottom: 0;
-        font-size: 0,8em;
-        font-style: italic;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        background-color: $bg-principal;
-        color: $fcolor-principal !important;
-      }
-    }
 
 
-/* ############################### STORE ##############################*/
+/* ####################################### STORE ######################################*/
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  padding: 1rem
+}
+h3{
+  text-align: center;
+}
 .adhere {
 
-    width: 50%;
+    max-width: 215px;
+    max-height: 140px;
     align-items: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: solid 0px red;
+    
     margin-bottom: 2rem;
   
   }
-.contenedor {
-    display: grid;
-    border-radius: 10px;
-    padding: 0.5em;
-    .cardsale {
-        max-width: 170px;
-        max-height: 250px;
-        border: solid 0px red;
-        padding: 5px;
+  body div.contenedorg {
+    width: 90%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+      .contenedor {
+        width: 80%;
+        .cardsdetailed {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2rem;
+          .cardsale {
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+          }
+              .button {
+                background-color: $bg-principal;
+                color: $fcolor-principal;
+                font-weight: bold;
+                border-radius: 0.5rem;
+                padding: 5px;
+        }
       }
-    .btn {
-        background-color: $bg-principal;
-        color: rgb(165, 201, 202);
-        font-weight: bold;
-      }
+    }
   }
 
 
-/* ########################## WORLDS ######################### */
+/* ########################## decklist ######################### */
 
 
 .carousel {
-    width:auto;
-    height:auto;
+    width:80%;
     margin:auto;
     padding: 1rem;
   }
   body main section h1 {
     text-decoration: none;
   }
-
-/*########################################################################## mediaqueries extra small 320px ############################################################################*/
-@media screen and (max-width: 479px){
   .icono-wrap {
     flex-wrap: wrap;
     justify-content: center !important;
 }
+
+/* ########################## contact us ######################### */
+
+main div.container {
+  width: 100%;
+  div.row {
+  display: flex;
+  flex-direction: column;
+
+  div.col {
+  width: auto;
 }
+}
+}
+/*########################################################################## 769px ############################################################################*/
 
-/*########################################################################## mediaqueries 480px ############################################################################*/
 
-
-@media screen and (min-width:480px) {
+@media screen and (min-width:769px) {
 
   body header .topnav {
     background-color: rgb(44, 51, 51);
@@ -277,10 +283,12 @@ p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
     padding-bottom: 5px;
-}
+  }
+/* ####################################### INDEX 600px ###################################### */
+
 .ptcg {
   padding: 1rem;
-  width: 35%;
+  width: 20%;
   align-items: center;
   display: block;
 }
@@ -293,26 +301,39 @@ p{
   display: show;
 }
 
+
 .adhere {
-
-  width: 50%;
-  height: 25%;
-  align-items: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5rem;
+  max-width: 300px;
+  max-height: 200px;
 }
 
-}
-/*########################################################################### mediaqueries 800px #############################################################################*/
 
-@media screen and (min-width:800px) {
+/* ####################################### STORE MQ 769px ###################################### */
+
+body div.contenedorg {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ .contenedor {
+  max-width: 300px;
+  
+ }
+
+}
+/* ####################################### decklist MQ 769px ###################################### */
+
+
+} 
+
+/*########################################################################### mediaqueries 899px #############################################################################*/
+
+@media screen and (min-width:899px) {
 
 
   /* index */
   .ptcg {
-    width: 15%;
+    width: 25%;
   }
   body header .topnav {
       background-color: rgb(44, 51, 51);
