@@ -1,2 +1,12 @@
 
 // mixin
+
+@mixin contact-border {
+    width: auto;
+    max-width: 600px;
+    background-color: #395b64;
+    box-shadow: 0 0 20px 0 #999;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+}

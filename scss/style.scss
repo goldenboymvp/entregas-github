@@ -187,9 +187,7 @@ h3{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    margin-bottom: 2rem;
-  
+    margin-bottom: 2rem
   }
   body div.contenedorg {
     width: 90%;
@@ -198,7 +196,6 @@ h3{
     justify-content: center;
     align-items: center;
     margin: auto;
-    
       .contenedor {
         width: 80%;
         .cardsdetailed {
@@ -252,6 +249,22 @@ input[type=email]{
   background-color: $fcolor-principal;
 }
 
+.contact {
+  padding-top: 1rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .content {
+    max-width: 800px;
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #395b64;
+    }
+  }
 .contact-container {
   width: auto;
   max-width: 600px;
@@ -281,36 +294,41 @@ input[type=email]{
     }
   }
 }
-
-.cus p {
-  font-size: 1.5rem;
 }
-.location-container {
-    width: auto;
-    max-width: 600px;
-    background-color: #395b64;
-    box-shadow: 0 0 20px 0 #999;
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    padding-bottom: 0.5rem;
-.location-wrapper {
-  max-width: 600px;
-  background-color: $bg-secundario;
-  display: flex;
-  justify-content: center;
+
+main {  
+  padding-top: 1rem;
+}
+.flex-container {
+
+  .loc-container {
+  @include contact-border
+  }
+.email-container{
+  @include contact-border
+}
+.callus-container {
+  @include contact-border
+}
   .location {
-    width: 90%;
+    display: flex;
+    margin: auto;
+    right: 50%;
+    left: 50%;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 }
-}
+
 
 
 
 /*########################################################################## 769px ############################################################################*/
 
 
-@media screen and (min-width:769px) {
+@media screen and (min-width: 769px) {
 
 
 /* ####################################### INDEX ###################################### */
@@ -399,5 +417,4 @@ margin-left: 100px;
 
 
 }
-/* #################################### contact us ###########################################*/
 
