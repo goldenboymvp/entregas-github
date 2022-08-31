@@ -1,5 +1,7 @@
 @import "utilities/variables";
 @import "utilities/mapas";
+@import "utilities/mixin";
+@import "utilities/extend";
 
 /**************************************************************mediaquery 300px *************************************************************/
 * {
@@ -11,24 +13,7 @@
 /******************************************************************************** index **************************************************************************************/
 
 /* ########## searchbars ######### */
-form.searchbar input[type=text] {
-  display: inline-block;
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  width: 90%;
-  background: #f1f1f1;
-}
 
-form.searchbar button {
-  width: 150px;
-  padding: 10px;
-  background: rgb(44, 51, 51);
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  cursor: pointer;
-}
 
 /*--################ imgs ##############-*/
 
@@ -95,11 +80,8 @@ p{
         list-style: none;
         display: inline-block;
       }
-    }
-
     .navbar a {
         color: rgb(165, 201, 202);
-    
     }
     .navbar a:hover {
         background-color: #ddd;
@@ -110,7 +92,7 @@ p{
         background-color: $bg-secundario;
         color: white;
     }
-
+  }
 
 .articulos {
 
@@ -229,18 +211,19 @@ h3{
             justify-items: center;
           }
               .button {
-                background-color: $bg-principal;
-                color: $fcolor-principal;
-                font-weight: bold;
-                border-radius: 0.5rem;
+                background-color: map-get($map: $buttoncolor, $key: buttoncolor);
+                color: map-get($map: $buttoncolor, $key: buttonfontcolor);
+                font-weight: map-get($map: $buttoncolor, $key: buttonfontstyle);
+                border-radius: map-get($map: $buttoncolor, $key: buttonborder);
                 padding: 5px;
+                box-shadow: 0 0 20px 0 #999;
         }
       }
     }
   }
 
 
-/* ########################## decklist ######################### */
+/* ########################## worlds ######################### */
 
 
 .carousel {
@@ -255,36 +238,82 @@ h3{
     flex-wrap: wrap;
     justify-content: center !important;
 }
+div#card {
+  right: 40px;
+  }
+  
 
 /* ########################## contact us ######################### */
+input[type=text]{
+  background-color: $fcolor-principal;
+}
 
-main div.container {
-  width: 100%;
-  div.row {
-  display: flex;
-  flex-direction: column;
+input[type=email]{
+  background-color: $fcolor-principal;
+}
 
-  div.col {
+.contact-container {
   width: auto;
+  max-width: 600px;
+  background-color: $bg-secundario;
+  box-shadow: 0 0 20px 0 #999;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  padding-bottom: 0.5rem;
+  form{
+    margin: 35px;
+    .button {
+      background-color: map-get($map: $buttoncolor, $key: buttoncolor);
+      color: map-get($map: $buttoncolor, $key: buttonfontcolor);
+      font-weight: map-get($map: $buttoncolor, $key: buttonfontstyle);
+      border-radius: map-get($map: $buttoncolor, $key: buttonborder);
+      padding: 5px;
+    }
+    .input-field {
+      height: 40px;
+      @extend .fields;
+      border: 1px solid $fcolor-principal;
+      .textarea-field {
+        height: 100%;
+        @extend .fields;
+      }
+    }
+  }
+}
+
+.cus p {
+  font-size: 1.5rem;
+}
+.location-container {
+    width: auto;
+    max-width: 600px;
+    background-color: #395b64;
+    box-shadow: 0 0 20px 0 #999;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    padding-bottom: 0.5rem;
+.location-wrapper {
+  max-width: 600px;
+  background-color: $bg-secundario;
+  display: flex;
+  justify-content: center;
+  .location {
+    width: 90%;
+  }
 }
 }
-}
+
+
+
 /*########################################################################## 769px ############################################################################*/
 
 
 @media screen and (min-width:769px) {
 
-  body header .topnav {
-    background-color: rgb(44, 51, 51);
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    margin-bottom: 2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1rem;
-    padding-bottom: 5px;
-  }
-/* ####################################### INDEX 600px ###################################### */
+
+/* ####################################### INDEX ###################################### */
 
 .ptcg {
   padding: 1rem;
@@ -308,7 +337,7 @@ main div.container {
 }
 
 
-/* ####################################### STORE MQ 769px ###################################### */
+/* ####################################### STORE ###################################### */
 
 body div.contenedorg {
   width: 90%;
@@ -321,17 +350,21 @@ body div.contenedorg {
  }
 
 }
-/* ####################################### decklist MQ 769px ###################################### */
+/* ####################################### worlds ###################################### */
 
 
-} 
+div#card {
+margin-left: 100px;
+}
+
+}
 
 /*########################################################################### mediaqueries 899px #############################################################################*/
 
 @media screen and (min-width:899px) {
 
 
-  /* index */
+  /* #################################### index ###########################################*/
   .ptcg {
     width: 25%;
   }
@@ -343,20 +376,15 @@ body div.contenedorg {
       padding-bottom: 5px;
   }
 
-    body main div.news-container {
-      width: 70% !important;
-      .news-title {
-        font-size: 1.2rem;
-    }
-      .news-info {
-        font-size: 0.9rem;
-      }
+  body main div.news-container {
+    width: 70% !important;
+    .news-title {
+      font-size: 1.2rem;
+    .news-info {
+      font-size: 0.9rem;
     }
     .news-upload {
       font-size: 1rem;
-  }
-  
-
         .news-image img{
           width: 100%;
           margin-left: auto;
@@ -364,3 +392,12 @@ body div.contenedorg {
         }
       
       }
+    }
+  }
+
+
+
+
+}
+/* #################################### contact us ###########################################*/
+
