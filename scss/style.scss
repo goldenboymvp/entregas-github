@@ -17,7 +17,9 @@
 
 /*--################ imgs ##############-*/
 
-
+a {
+  color: #395b64;  
+}
 
 .pokx {
     display: block;
@@ -28,7 +30,7 @@
 
 .ptcg {
 
-    width: 25%;
+    width: 35%;
     align-items: center;
     display: block;
     margin-left: auto;
@@ -42,7 +44,8 @@
 }
 
 p{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif!important;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
 }
 /*----------------------------------- logo -----------------------------------*/
 
@@ -94,8 +97,24 @@ p{
     }
   }
 
-.articulos {
 
+.content-land {
+  display: flex;
+  flex-direction: column;
+  .content-box {
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+  .content-text {
+    font-weight: bolder;
+}
+}
+
+
+
+.articulos {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background: $bg-principal;
     font-size: 1.2rem;
@@ -235,9 +254,12 @@ h3{
     flex-wrap: wrap;
     justify-content: center !important;
 }
-div#card {
-  right: 40px;
-  }
+#card {
+  padding-bottom: 1rem;
+}
+
+
+
   
 
 /* ########################## contact us ######################### */
@@ -300,7 +322,11 @@ main {
   padding-top: 1rem;
 }
 .flex-container {
-
+  .flex-container-dos{
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
   .loc-container {
   @include contact-border
   }
@@ -310,16 +336,7 @@ main {
 .callus-container {
   @include contact-border
 }
-  .location {
-    display: flex;
-    margin: auto;
-    right: 50%;
-    left: 50%;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
+
 }
 
 
@@ -335,7 +352,7 @@ main {
 
 .ptcg {
   padding: 1rem;
-  width: 20%;
+  width: 30%;
   align-items: center;
   display: block;
 }
@@ -372,7 +389,7 @@ body div.contenedorg {
 
 
 div#card {
-margin-left: 100px;
+margin-bottom: 1rem;
 }
 
 }
@@ -394,8 +411,23 @@ margin-left: 100px;
       padding-bottom: 5px;
   }
 
-  body main div.news-container {
-    width: 70% !important;
+  .content-land {
+    margin: 5rem;
+  }
+  .content-box{
+    display: flex;
+    justify-content: space-between;
+    .ptcg {
+      width: 48%;
+    }
+  }
+
+
+  body main section.news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .news-container {
+      height: auto;
     .news-title {
       font-size: 1.2rem;
     .news-info {
@@ -408,13 +440,21 @@ margin-left: 100px;
           margin-left: auto;
           margin-right: auto;
         }
-      
+      }
       }
     }
   }
 
-
-
+  /* #################################### contact ###########################################*/
+  .flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+.flex-container-dos{
+  flex-direction: row;
+}
+  }
 
 }
 
